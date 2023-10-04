@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Currency Converter</title>
+		<!--custom css-->
+		<link rel="stylesheet" href="./currency-converter.css">
+		<!--flags css-->
+		<link rel="stylesheet" href="./node_modules/currency-flags/dist/currency-flags.css">
+		<!--fontawesome-->
+		<script src="https://kit.fontawesome.com/aebcb776aa.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div class="container">
+		
+			<!--template-->
+			
+			<div class="part part-1 head-section">
+				<h1><i class="fa-solid fa-hippo"></i>&nbsp;&nbsp;CURRENCY CONVERTER</h1>
+			</div>
+			
+			<div class="part part-2 flag-section">
+				<!--currencies section-->
+			
+				<h2 class="topic">Currencies</h2>
+				
+				<section class="currency-symbols" id="symbols">
+					<!--data generate using js-->
+				</section>
+				
+				<!--###-->
+			</div>
+			
+			<div class="part part-3 convert-section">
+				<!--currency converter section-->
+				
+				<section class="currency-convert" id="convert">
+					<div class="from">
+						<div class="flag-of-currency" id="base-flag">
+							<!--base flag-->
+						</div>
+						<select id="baseSelect">
+							<!--base option generate through js-->
+						</select>
+						<div class="get-base-value">
+							<input type="text" id="baseValue" />
+						</div>
+					</div>
+					<div class="divider"></div>
+					<div class="to">
+						<div class="flag-of-currency" id="depend-flag">
+							<!--depend flag-->
+						</div>
+						<select id="dependSelect">
+							<!--depend option generate through js-->
+						</select>
+						<div class="get-depend-value">
+							<input type="text" id="dependValue" />
+						</div>
+					</div>
+				</section>
+				
+				<!--###-->
+			</div>
+			
+			<div class="part part-4 latest-rates-section">
+				<!--latest rates-->
+			
+				<h2 class="topic">Latest Rates</h2>
+				<hr>
+				
+				<section class="latest-rates" id="rates">
+					<table id="ratesData">
+						<thead class="dot-head">
+							<!--data generate using js-->
+						</thead>
+						<tbody class="dot-body">
+							<!--data generate using js-->
+						</tbody>
+					</table>
+				</section>
+				
+				<!--###-->
+			</div>
+			
+			<div class="part part-5 footer-section">
+				<footer>&copy; room8</footer>
+			</div>
+			
+			<!--###-->
+			
+		</div>
+		<!--custom javascript-->
+		<script src="./currency-list.js"></script>
+		<script src="./currency-latest-rates.js"></script>
+		<script src="./currency-converter.js"></script>
+	</body>
+</html>
