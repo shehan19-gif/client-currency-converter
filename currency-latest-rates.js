@@ -43,7 +43,6 @@ function clickedButton() {
 		btn.onclick = function() {
 			const currencyId = btn.id;
 			latestRates(currencyId);
-			console.log(currencyId);
 		}
 	})
 	

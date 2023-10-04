@@ -55,6 +55,7 @@ accessToDepend.onchange = function() {
 document.getElementById('baseValue').onkeyup = function() {
 	const baseValue = document.getElementById('baseValue').value;
 	if(baseValue != '') {
+		console.log(baseValue);
 		currencyConvert(baseValue, 0);
 	}else {
 		document.getElementById('dependValue').value = '';
@@ -79,7 +80,7 @@ function currencyConvert(base, depend) {
 	if(base != 0) {
 		const dependChange = document.getElementById('dependValue');
 		currencyConvertLink(baseSelect, dependSelect, base).then(result => {
-			dependChange.value = result.result;
+			dependChange.value = Number(result.result) * Number(document.getElementById('baseValue').value);
 		});
 	}else if(depend != 0) {
 		const baseChange = document.getElementById('baseValue');
